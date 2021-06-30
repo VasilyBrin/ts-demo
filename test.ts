@@ -1,20 +1,16 @@
+let c: 'test' = 'test';
 
-// Решение
-interface Info {
-	desc: string;
-	isActive: boolean;
+type actionType = 'up' | 'down';
+
+function performAction(action: actionType | ComplexAction) {
+  switch (action) {
+    case 'down':
+      return -1;
+    case 'up':
+      return 1;
+  }
 }
 
-interface Tag {
-	name: string;
-	value: number;
+interface ComplexAction {
+	s: string;
 }
-
-interface Reply {
-	userId: number;
-	id: number;
-	title: string;
-	info: Info;
-	tags: Tag[];
-}
-
