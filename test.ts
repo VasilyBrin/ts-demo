@@ -1,39 +1,39 @@
-let a: number = 4;
-let b = 'fdhetgj';
-let c = true
+type Point = {
+	x: number,
+	y: number
+};
 
-let d: string[] = ['sdf',  'sdfg'];
-
-let e: any = 3;
-e = 'ghfk'
-
-function test(a: string): number | string {
-	return '';
+type D3Point = Point & {
+	z: number;
 }
 
-const test2 = (a: number): void => {
-	return;
+interface IPoint {
+	x: number,
+	y: number
+};
+
+interface I3DPoint extends IPoint {
+	z: number;
 }
 
-d = d.map((x: string) => x.toLowerCase())
+type stringOrNumber = string | number;
 
-function countCoord(coord: { lat: number, long?: number }) {
+const c = (point: IPoint) => {
+	const d: I3DPoint = point as I3DPoint;
+}
+
+const myCanvas = document.getElementById('canvas') as HTMLCanvasElement
+
+
+function print(coord: IPoint) {
 
 }
 
-function printIt(id: number | string ) {
-	if (typeof id === 'number') {
-		console.log(id.toString());
-	} else if(typeof id === 'string') {
-		id.toUpperCase()
-	}
+interface ITest {
+	a: number;
 }
 
-function getSum(a: number | number[]) {
-	if(Array.isArray(a)) {
-	
-	}
+interface ITest {
+  	b: number;
 }
 
-const x: undefined = undefined;
-const z: null = null;
