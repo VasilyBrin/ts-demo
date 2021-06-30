@@ -1,3 +1,5 @@
+
+// Решение
 interface Info {
 	desc: string;
 	isActive: boolean;
@@ -8,7 +10,7 @@ interface Tag {
 	value: number;
 }
 
-interface Reaply {
+interface Reply {
 	userId: number;
 	id: number;
 	title: string;
